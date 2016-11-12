@@ -15,12 +15,12 @@ public class MovementStateHandler : MonoBehaviour
     // Use this for initialization
     void Awake() {
         mob = player;
-        moveFoward = GetComponentInParent<StateMoveForward>();
-        moveDown = GetComponentInParent<StateMoveDown>();
-        moveUp = GetComponentInParent<StateMoveUp>();
-        moveLeft = GetComponentInParent<StateMoveLeft>();
-        moveRigth = GetComponentInParent<StateMoveRigth>();
-        playerMovement = GetComponentInParent<MovementHandler>();
+        moveFoward = GetComponent<StateMoveForward>();
+        moveDown = GetComponent<StateMoveDown>();
+        moveUp = GetComponent<StateMoveUp>();
+        moveLeft = GetComponent<StateMoveLeft>();
+        moveRigth = GetComponent<StateMoveRigth>();
+        playerMovement = GetComponent<MovementHandler>();
         
         initConfig();
         
