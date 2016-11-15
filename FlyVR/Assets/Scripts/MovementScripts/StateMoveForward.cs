@@ -7,8 +7,8 @@ public class StateMoveForward : MovementState {
 
     private Rigidbody rg;
     // Use this for initialization
-    void Start () { 
-
+    void Start () {
+        rg = GetComponent<Rigidbody>();
 	}
 	// Update is called once per frame
 	void Update () {

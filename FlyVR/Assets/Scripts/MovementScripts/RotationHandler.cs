@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovementHandler : MovementState {
+public class RotationHandler: MovementState {
     public Vector3 movementVector;
-    public GameObject mob;
     public float speedSides;
 	// Use this for initialization
 	void OnEnable () {
@@ -11,17 +10,18 @@ public class MovementHandler : MovementState {
 }
 
 // Update is called once per frame
-void Update () {
-        Debug.Log("MovementHandler");
+   void Update () {
         SetRotation();
         MoveSides();
     }
     void SetRotation() {
-    mob.transform.rotation = new Quaternion(0
-    , Camera.main.transform.localRotation.y
-    , mob.transform.rotation.z
-    , mob.transform.rotation.w);
-        mob.transform.Translate(movementVector);
+        this.transform.rotation = Camera.main.transform.rotation;
+        /*Debug.Log(this.transform.rotation);
+        Debug.Log("Camera"+new Quaternion(Camera.main.transform.rotation.x
+    , Camera.main.transform.rotation.y
+    , this.transform.rotation.z
+    , this.transform.rotation.w));*/
+    //this.transform.Translate(movementVector);
     }
     void MoveSides() { 
         movementVector.y = Camera.main.transform.rotation.x * speedSides * -1 * Time.deltaTime;

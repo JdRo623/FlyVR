@@ -9,7 +9,7 @@ public class MovementStateHandler : MonoBehaviour
     private StateMoveUp moveUp;
     private StateMoveRigth moveRigth;
     private StateMoveLeft moveLeft;
-    private MovementHandler playerMovement;
+    private RotationHandler playerMovement;
     private StateMoveForward moveFoward;
     public MovementState currentState;
     // Use this for initialization
@@ -20,7 +20,7 @@ public class MovementStateHandler : MonoBehaviour
         moveUp = GetComponent<StateMoveUp>();
         moveLeft = GetComponent<StateMoveLeft>();
         moveRigth = GetComponent<StateMoveRigth>();
-        playerMovement = GetComponent<MovementHandler>();
+        playerMovement = GetComponent<RotationHandler>();
         
         initConfig();
         
